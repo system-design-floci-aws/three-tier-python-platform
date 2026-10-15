@@ -10,6 +10,6 @@ crash.log
 crash.*.log
 *.pem
 *.key
-.env
-*/dev*
 .DS_Store
+environments/dev/dev
+environments/dev/dev.txt

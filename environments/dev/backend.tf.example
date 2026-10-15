@@ -1,0 +1,11 @@
+# Rename to backend.tf only AFTER creating the state bucket with versioning,
+# encryption, blocked public access and the right IAM policies.
+terraform {
+  backend "s3" {
+    bucket       = "REPLACE-WITH-YOUR-STATE-BUCKET"
+    key          = "three-tier/dev/network/terraform.tfstate"
+    region       = "ap-south-1"
+    encrypt      = true
+    use_lockfile = true
+  }
+}
